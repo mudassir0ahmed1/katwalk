@@ -1,0 +1,129 @@
+.Bespoke{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    overflow: hidden;
+    .BespokeContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: 90%;
+        position: relative;
+         text-transform: uppercase;
+        img{
+            width: 100%;
+            object-fit: cover;
+            z-index: 3;
+            position: relative;
+            transform: scale(1.2);
+            transition: 2s;
+        }
+        button{
+            position: relative;
+            transition: .5s;
+            z-index: 5;
+            cursor: pointer;
+            margin: auto;
+            display: inline-block;
+            text-transform: uppercase;
+            background: transparent;
+            border:1px solid #ccc;
+            color: #333;
+            position: relative;
+            width: 180px;
+            height: 40px;
+            background-color: #fff;
+            &::before{
+                position: absolute;
+                content: '';
+                width: 0%;
+                right: 0;
+                height: 100%;
+                background-color: #c53a19;
+                top: 0;
+                transition: .4s;
+            }
+            &::after{
+                position: absolute;
+                content: 'View More';
+                line-height: 40px;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+              
+            }
+            &:hover::before{
+                width: 100%;
+                left: 0;
+                color: #fff;
+            }
+            &:hover::after{
+                color: #fff;
+            }
+    }
+    }
+}
+
+.bespokeImg{
+    position: relative;   
+    overflow: hidden;
+    h1{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        z-index: 6;
+        transform: translate(-50%,-50%) scale(0.9);
+        transition: 2s;
+        transition-delay: .5s;
+        color: #Fff;
+        font-family: fahkwang,sans-serif;
+        font-size: 130px;
+        font-weight: 300;
+    }
+    &.animate{
+        h1{
+            transform: translate(-50%,-50%) scale(1);
+        }
+        img{
+            transform: scale(1);
+        }
+    }
+}
+@media(min-width:786px){
+  .BespokeContainer{
+    &::before{
+        content:'';
+        position: absolute;
+        top:0;
+        right: -10%;
+        width: calc(60% + 130px);
+        height: 109%;
+        background: #fbf1e8;
+    }}
+}
+@media(max-width:786px){
+
+    .bespokeImg{
+        position: relative;
+        h1{
+           
+            font-size: 80px;
+            
+        }
+    }
+}
+@media(max-width:786px){
+  .Bespoke .BespokeContainer button{
+      padding: .8rem;
+  }
+    .bespokeImg{
+        position: relative;
+        h1{
+           
+            font-size: 50px;
+            
+        }
+    }
+}

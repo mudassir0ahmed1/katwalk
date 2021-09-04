@@ -1,0 +1,273 @@
+.GRIDCARDS {
+  position:relative;
+  overflow:hidden;
+  & > h4 {
+    text-align: center;
+    font-family: fahkwang, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-weight: 400;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  // .CARDCONTAINER{
+
+  // }
+  .Grid3-2 {
+    .GRIDCARD {
+      width: 33.25%;
+    }
+  }
+  .Grid4-2 {
+    .GRIDCARD {
+      width: 24.9%;
+    }
+  }
+  .CardRow {
+    display: flex;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    justify-content: center;
+    overflow: hidden;
+    column-gap: 1px;
+    .GRIDCARD {
+      cursor: pointer;
+      position: relative;
+      & > a{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+
+      }
+      p {
+        padding: 0 10px;
+      }
+      a:hover ~ .GRIDCARDCONTENT p {
+        background: #c53a19;
+        color: #fff;
+      }
+    }
+    .GRIDCARDIMG {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      transition: 0.2s;
+      .BADGE {
+        position: absolute;
+        left: 0;
+        background-color: #000;
+        color: #fff;
+        font-size: 12px;
+        line-height: 1.6;
+        padding: 0 10px;
+        font-weight: 300;
+        z-index:6;
+      }
+      .heart {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 25px;
+        z-index:6;
+        fill: #c53a19;
+        display: none;
+      }
+      .CARDIMG {
+        width: 100%;
+        object-fit: contain;
+        // position: absolute;
+        top: 0;
+        transition: 0.4s;
+      }
+      .CARDIMGHOVER {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transform: scale(1.05);
+      }
+      .heart.active{
+        display: block;
+        
+      }
+    }
+    a:hover ~ .GRIDCARDIMG {
+      .heart {
+        display: block;
+      }
+      .CARDIMGHOVER {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .GRIDCARDCONTENT {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-size: 14px;
+      padding: 5px;
+      padding-top: 1rem;
+      h4 {
+        font-size: 18px;
+        font-family: fahkwang, sans-serif;
+        font-weight: 300;
+        overflow: hidden;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-bottom: 10px;
+        max-width: 100%;
+      }
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100%;
+      }
+      span {
+        letter-spacing: 1.5px;
+        color: #333;
+      }
+    }
+  }
+}
+
+.VIEWBTN {
+  margin: auto;
+  display: inline-block;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid #888;
+  color: #888;
+  position: relative;
+  width: 180px;
+  height: 40px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    right: 0;
+    height: 100%;
+    background-color: #c53a19;
+    top: 0;
+    transition: 0.7s;
+  }
+  &::after {
+    position: absolute;
+    content: attr(data-text);
+    line-height: 40px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &:hover::before {
+    width: 100%;
+    left: 0;
+  }
+}
+.CENTER {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  cursor: pointer;
+  .VIEWBTN {
+    position: relative;
+    transition: 0.5s;
+    z-index: 5;
+    width: 180px;
+    height: 40px;
+    cursor: pointer;
+    &:hover {
+      background-color: #c53a19;
+      transform-origin: left;
+      color: #fff;
+      border: none;
+    }
+  }
+}
+@media (max-width: 786px) {
+  .VIEWBTN {
+    padding: 0.8rem;
+  }
+  .GRIDCARDS {
+    .Grid3-2 {
+      .GRIDCARD {
+        width: 49.8%;
+        &:nth-child(1) {
+          width: 100%;
+        }
+      }
+    }
+    .Grid4-2 {
+      .GRIDCARD {
+        width: 49.8%;
+      }
+    }
+  }
+}
+
+.card_carousel_chevron_right,
+.card_carousel_chevron_left {
+  display: none;
+}
+.GRID_CAROUSEL_CONTAINER {
+  position: relative;
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.GridCarousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  overflow: hidden;
+}
+.GridCarouselSlide {
+  width: 100vw;
+}
+.card_carousel_chevron {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  width: 40px;
+  z-index: 6;
+  display: block;
+  cursor: pointer;
+}
+
+.card_carousel_chevron_left {
+  left: 1rem;
+}
+.card_carousel_chevron_right {
+  left: 95vw;
+}
+.PRODUCT_GRID_BTN{
+  width:280px;
+  margin: 2rem auto!important;
+  display: block;
+  cursor: pointer;
+  &:hover::after{
+    color: #Fff;
+  }
+}
+.rtl{
+  .GRIDCARDS > h4{
+    font-family: 'almarai',sans-serif;
+  }
+  .GRIDCARDS .CardRow .GRIDCARDCONTENT {
+   p{ font-size: 14px;line-height: 21px;font-weight: 300; }
+   h4{font-size: 18px;line-height: 27px;font-weight: 300 }
+  }
+}

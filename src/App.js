@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { Route, Switch } from 'react-router-dom';
+import './App.css'
+import DesignerDetail from './pages/DesignerDetail';
+import Landing from './pages/Landing'
+import Login from './pages/Login';
+import ProductDetails from './pages/ProductDetails';
+import WhatsNew from './pages/WhatsNew';
+import CheckOut from './pages/CheckOut'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <Switch>
+     <Route exact path='/' component={Landing}/>
+     <Route  path='/whats-new' component={WhatsNew}/>
+     <Route  path='/designer-detail' component={DesignerDetail}/>
+     <Route  path='/login' component={Login}/>
+     <Route  path='/product_details' component={ProductDetails}/>
+     <Route  path='/check_out' component={CheckOut}/>
+   </Switch>
+  </>
   );
 }
 

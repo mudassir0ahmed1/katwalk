@@ -1,0 +1,78 @@
+.instaFeed {
+  margin-bottom: 80px;
+  margin-top: 3rem;
+  h2 {
+    font-size: 35px;
+    font-family: "Fahkwang", sans-serif;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 20px;
+    img {
+      width: 32px;
+    }
+  }
+  .feed {
+    height: 250px;
+    width: 100%;
+    margin: 2rem 0;
+  }
+  .subscribeInputWrapper {
+    max-width: 580px;
+    height: 70px;
+    padding: 0 17px;
+    margin: auto;
+    text-align: center;
+    span {
+      font-size: 18px;
+      font-weight: 300;
+      color: #000;
+      margin: 20px 0;
+      display: block;
+    }
+    div {
+      margin: 10px 0;
+      position: relative;
+      input {
+        width: 100%;
+        padding: 20px;
+        height: 70px;
+        border: none;
+        border-bottom: 1px solid #ededed;
+        outline: none;
+      }
+      label {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 13px;
+        transition: 0.4s;
+        letter-spacing: 0.6px;
+      }
+      input:focus + label,
+      input:not(:placeholder-shown) + label {
+        top: 6%;
+      }
+      input::placeholder {
+        color: transparent;
+      }
+      button {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        padding: 10px;
+        background: transparent;
+        font-weight: 300;
+        background: transparent;
+        cursor: pointer;
+        z-index: 3;
+      }
+    }
+  }
+}

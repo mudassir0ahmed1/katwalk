@@ -1,0 +1,172 @@
+.login_container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login_container > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 100vh;
+}
+
+.login_container form {
+  position: absolute;
+  top: 52%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.75);
+  right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  width: 33%;
+  padding: 25px;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.login_container form h4 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 10px 0 20px;
+}
+
+.login_container form > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.login_container form > div .login_code_input {
+  width: 35%;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+}
+
+.login_container form > div .login_code_input .login_code_dropdown_btn {
+  border: 1px solid #fff;
+  display: block;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  margin-right: 20px;
+}
+
+.login_container form > div .login_code_input .login_code_dropdown_btn img {
+  width: 10px;
+}
+
+.login_container form > div .login_code_dropdown {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  left: 0;
+  top: 40px;
+  background: #635b5b;
+  z-index: 3;
+  display: none;
+}
+
+.login_container form > div .login_code_dropdown.active {
+  display: block;
+}
+
+.login_container form > div .login_code_dropdown li {
+  padding: 0 8px;
+}
+
+.login_container form > div .login_code_dropdown .code_selected {
+  background: blueviolet;
+}
+
+.login_container form > div .login_number_input {
+  width: 73%;
+  height: 40px;
+}
+
+.login_container form > div .login_number_input input {
+  width: 100%;
+  border: 1px solid #fff;
+  background: none;
+  display: block;
+  line-height: 40px;
+  padding: 0 8px;
+  color: #fff;
+  font-weight: 100;
+}
+
+.login_container form > div .login_number_input img {
+  width: 20px;
+}
+
+.login_container form img {
+  width: 20px;
+}
+
+.login_container form button {
+  height: 40px;
+  margin: 10px 0;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.login_container form button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  right: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.login_container form button::before {
+  content: "Continue";
+  font-weight: 300;
+  z-index: 3;
+  position: relative;
+}
+
+.login_container form button:hover {
+  border: 1px solid #c53a19;
+}
+
+.login_container form button:hover::after {
+  left: 0;
+  width: 100%;
+  background: #c53a19;
+}
+
+@media (max-width: 1000px) {
+  .login_container form {
+    width: 90%;
+    max-width: 600px;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+  }
+}
+/*# sourceMappingURL=styles.css.map */

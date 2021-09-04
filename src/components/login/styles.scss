@@ -1,0 +1,137 @@
+.login_container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+   & >  img{
+        width: 100%;
+        object-fit: cover;
+        min-height: 100vh;
+    }
+    form{
+        position: absolute;
+        top: 52%;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.75);
+        right: 5%;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        width: 33%;
+        padding: 25px;
+        font-size: 15px;
+        font-weight: 100;
+        h4{
+            text-align: center;
+            font-size: 24px;
+            font-weight: 300;
+            margin: 10px 0 20px;
+        }
+         &> div{
+             display: flex;
+             justify-content: space-between;
+             .login_code_input{
+                 width: 35%;
+                 height:40px;
+                 line-height: 40px;
+                 color: #fff;
+                .login_code_dropdown_btn{
+                    border: 1px solid #fff;
+                    display: block;
+                    padding: 0 8px;
+                    display: flex;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    position: relative;
+                    margin-right: 20px;
+                    img{
+                        width: 10px;
+                    }
+                }
+                
+                }
+                .login_code_dropdown{
+                    position: absolute;
+                    background: rgba(0,0,0,0.3);
+                    width: 100%;
+                    left: 0;
+                    top: 40px;
+                    background: rgb(99, 91, 91);
+                    z-index: 3;
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+                    li{
+                        padding: 0 8px;
+                    }
+                    .code_selected{
+                        background: blueviolet;
+                    }
+                }
+                .login_number_input{
+                    width: 73%;
+                    height: 40px;
+                    input{
+                        width: 100%;
+                        border: 1px solid #fff;
+                        background: none;
+                        display: block;
+                        line-height: 40px;
+                        padding :0 8px;
+                        color: #fff;
+                        font-weight: 100;
+                    }
+                 img{
+                     width: 20px;
+                 }
+             }
+         }
+        img{
+            width: 20px;
+        }
+        button{
+            height: 40px;
+            margin: 10px 0;
+            border: 1px solid #fff;
+            background: transparent;
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                right: 0;
+                transition: .5s;
+            }
+            &::before{
+                content: "Continue";
+                font-weight: 300;
+                z-index: 3;
+                position: relative;
+            }
+            &:hover{
+                border: 1px solid #c53a19;
+                
+                &::after{
+                left: 0;
+                width: 100%;
+                background: #c53a19;
+            }}
+
+        }
+    }
+}
+@media(max-width:1000px){
+    .login_container {
+        form{
+            width: 90%;
+            max-width: 600px;
+            right: 50%;
+            transform: translate(50%,-50%);
+        }
+    }
+}
