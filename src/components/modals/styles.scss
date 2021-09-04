@@ -1,0 +1,66 @@
+.modal_container{
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 80;
+    pointer-events: none;
+    transition: .4s;
+    .size_modal{
+        width: 80%;
+        min-height: 380px;
+        background: #fff;
+        max-width: 700px;
+        opacity: 0;
+        pointer-events: none;
+        transition: .4s;
+        .size_modal_header{
+            border : 1px solid #ededed;
+            padding: 2rem 2rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img{
+                width: 20px;
+                cursor: pointer;
+            }
+        }
+        .size_modal_body{
+            width: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+    &.active{
+         background: rgba(0,0,0,.5);
+         pointer-events: initial;
+         .size_modal{
+             opacity: 1;
+             pointer-events: initial;
+         }
+    }
+}
+.address_container{
+    padding: 1rem 2rem 2rem;
+}
+.address_save_button{
+    color: #fff;
+    background-color: #c53a19;
+    border:none;
+    line-height: 40px;
+    width: 100px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+}

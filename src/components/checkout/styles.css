@@ -1,0 +1,430 @@
+.check_out {
+  margin-top: 100px;
+  padding: 0 5%;
+}
+
+.check_out .checkout_breadcrumb {
+  font-size: 12px;
+  letter-spacing: .07em;
+  margin-bottom: 2.5rem;
+}
+
+.check_out .check_out_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1.5%;
+          column-gap: 1.5%;
+}
+
+.check_out .check_out_container > div {
+  position: relative;
+}
+
+.check_out .check_out_container > div > span {
+  width: 100%;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.check_out .check_out_container > div:first-child {
+  width: 34%;
+}
+
+.check_out .check_out_container > div:first-child::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 18px solid #c53a19;
+  right: 2px;
+  top: 15px;
+  position: absolute;
+  z-index: 5;
+}
+
+.check_out .check_out_container > div:first-child::after {
+  width: 20px;
+  height: 50px;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background-color: #fff;
+}
+
+.check_out .check_out_container > div:nth-child(2) {
+  width: 32%;
+}
+
+.check_out .check_out_container > div:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #Fff;
+  border-top: 20px  inset transparent;
+  border-bottom: 20px  inset transparent;
+}
+
+.check_out .check_out_container > div:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 0;
+  top: 15px;
+  height: 0;
+  border-left: 18px solid #c53a19;
+  border-bottom: 20px solid transparent;
+  border-top: 20px solid transparent;
+}
+
+.check_out .check_out_container > div:nth-child(2) > div span::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: -2px;
+  width: 20px;
+  height: 50px;
+  background-color: #fff;
+}
+
+.check_out .check_out_container > div:nth-child(3) {
+  width: 32%;
+}
+
+.check_out .check_out_container > div:nth-child(3)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #Fff;
+  border-top: 20px  inset transparent;
+  border-bottom: 20px  inset transparent;
+}
+
+.check_out .check_out_container .checkout_header {
+  background-color: #c53a19;
+  color: #Fff;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 14px 0;
+  padding: 13px 12px 13px 20px;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.check_out .check_out_container .check_out_details_form .check_out_details_form_header {
+  margin-top: 16px;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 25px;
+}
+
+.check_out .check_out_container .check_out_details_form .check_out_details_form_header span {
+  display: block;
+  margin: auto;
+  padding: 8px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid;
+  width: 120px;
+}
+
+.check_out .check_out_container .check_out_details_form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 4%;
+          column-gap: 4%;
+}
+
+.check_out .check_out_container .check_out_details_form form .check_out_inputWrapper {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.check_out .check_out_container .check_out_details_form form .check_out_inputWrapper input, .check_out .check_out_container .check_out_details_form form .check_out_inputWrapper select {
+  line-height: 40px;
+  font-size: 11px;
+  font-weight: 300;
+  padding-left: 10px;
+  border: none;
+  border-bottom: 1px solid #ededed;
+  width: 100%;
+}
+
+.check_out .check_out_container .check_out_details_form form .check_out_inputWrapper select {
+  height: 40px;
+}
+
+.check_out .check_out_container .check_out_details_form form .check_out_inputWrapper_half {
+  width: 48%;
+}
+
+.check_out_details_form .check_out_details_form_header {
+  margin-top: 16px;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.check_out_details_form .check_out_details_form_header span {
+  display: block;
+  margin: auto;
+  padding: 8px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid;
+  width: 120px;
+}
+
+.check_out_details_form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 4%;
+          column-gap: 4%;
+}
+
+.check_out_details_form form .check_out_inputWrapper {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.check_out_details_form form .check_out_inputWrapper input, .check_out_details_form form .check_out_inputWrapper select {
+  line-height: 40px;
+  font-size: 11px;
+  font-weight: 300;
+  padding-left: 10px;
+  border: none;
+  border-bottom: 1px solid #ededed;
+  width: 100%;
+}
+
+.check_out_details_form form .check_out_inputWrapper select {
+  height: 40px;
+}
+
+.check_out_details_form form .check_out_inputWrapper_half {
+  width: 48%;
+}
+
+.payment_and_shipping_container {
+  margin-top: -6px;
+}
+
+.payment_and_shipping_container ul li {
+  line-height: 40px;
+  border-bottom: 1px solid #ededed;
+  padding-left: 10px;
+}
+
+.payment_and_shipping_container ul li label {
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  margin-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.payment_and_shipping_container ul li label::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -30px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.payment_and_shipping_container ul li label:after {
+  content: '';
+  position: absolute;
+  top: .5px;
+  left: -25px;
+  width: 12px;
+  height: 12px;
+  background-color: #c53a19;
+  border-radius: 50%;
+  display: none;
+}
+
+.payment_and_shipping_container ul li input {
+  display: none;
+}
+
+.payment_and_shipping_container ul li input:checked + label::after {
+  display: block;
+}
+
+.payment_footer {
+  margin-top: 30px;
+}
+
+.payment_footer img {
+  width: 132px;
+}
+
+.payment_footer p {
+  font-size: 13px;
+  color: #6b6e73;
+  margin: 13px 0;
+}
+
+.order_summary_container {
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ededed;
+}
+
+.order_summary_container ul li {
+  position: relative;
+  border-bottom: 1px solid #ededed;
+  padding-top: 1rem;
+}
+
+.order_summary_container .cart_sidebar_footer {
+  padding-right: 10px;
+}
+
+@media (max-width: 1000px) {
+  .check_out .check_out_container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 2rem;
+  }
+  .check_out .check_out_container > div:nth-child(1) {
+    width: 100%;
+  }
+  .check_out .check_out_container > div:nth-child(2), .check_out .check_out_container > div:nth-child(3) {
+    width: 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .check_out .check_out_container > div:nth-child(2), .check_out .check_out_container > div:nth-child(3) {
+    width: 100%;
+  }
+  .check_out .check_out_container > div:nth-child(2)::before, .check_out .check_out_container > div:nth-child(2)::after, .check_out .check_out_container > div:nth-child(3)::before, .check_out .check_out_container > div:nth-child(3)::after {
+    display: none;
+  }
+}
+
+.checkout_add_button {
+  position: relative;
+}
+
+.checkout_add_button label {
+  font-size: 13px;
+  font-weight: 300;
+  margin-left: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.checkout_add_button label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.checkout_add_button .add_new_tick {
+  position: absolute;
+  width: 13px;
+  z-index: 5;
+  left: 14px;
+  top: 3px;
+  display: none;
+}
+
+.checkout_add_button button {
+  width: 180px;
+  line-height: 40px;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  display: block;
+  margin-left: 20px;
+  margin-top: 10px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkout_add_button button:hover {
+  background-color: #c53a19;
+}
+
+.checkout_add_button input {
+  display: none;
+}
+
+.checkout_add_button input:checked + label::before {
+  background-color: #c53a19;
+  border: none;
+}
+
+.checkout_add_button input:checked + label + .add_new_tick {
+  display: block;
+}
+
+.checkout_add_button input:checked + label + .add_new_tick + button {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.radio_for_address label {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  border-radius: 50%;
+}
+
+.radio_for_address label::before {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 16px;
+  top: 4px;
+  background: #c53a19;
+  border-radius: 50%;
+  left: 4px;
+  display: none;
+}
+
+.radio_for_address input {
+  display: none;
+}
+
+.radio_for_address input:checked + label::before {
+  display: block;
+}
+/*# sourceMappingURL=styles.css.map */
